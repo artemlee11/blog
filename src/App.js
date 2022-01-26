@@ -6,8 +6,9 @@ import Sidebar from './components/Sidebar/Sidebar'
 import { Routes, Route } from "react-router-dom";
 import PostForm from './pages/PostForm/PostForm';
 import SinglePost from './pages/SinglePost/SinglePost';
-import Register from './pages/Register/register'
+import Register from './pages/Register/Register'
 import Login from './pages/Login/Login'
+
 const App = () => {
   return (
     <div className="App">
@@ -17,7 +18,7 @@ const App = () => {
         <Route path="/" element={<Main />} />
         <Route path="/createpost" element={<PostForm />} />
         <Route path="/singlepost/:id" element={<SinglePost />} />
-        <Route path="/register" element={<Register/>}/>
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login/>}/>
       </Routes>  
       {/* <Sidebar /> */}

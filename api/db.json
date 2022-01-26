@@ -1,9 +1,40 @@
 {
+  "users": [
+    {
+      "email": "arsen@mail.ru",
+      "password": "$2a$10$.TfeFjCR6.FBDWoCqNwAOOI1PSi7Ztol1iWcA.eulrEQpeI9v0EN.",
+      "username": "ArsenIusupov",
+      "id": 1
+    },
+    {
+      "email": "asd@gmail.com",
+      "password": "$2a$10$/8HKo3ed9UFSMDZWJcfIv.6U1SyO0FgD8w4aB/JCWQ2mgtb.YGHdm",
+      "username": "qwertyuio",
+      "id": 2
+    },
+    {
+      "email": "artem@gmail.com",
+      "password": "$2a$10$WrxwTDYuhnfAW5.uhIzE3O74yncPX/1lSfF2.WsK6228jdOLuGeEW",
+      "username": "artem",
+      "id": 3
+    },
+    {
+      "email": "arsen12@mail.ru",
+      "password": "$2a$10$Qfwa5j6Yb549LrRV.lOc9uxrM77vcLsFzA17m80lA1A1/Ko2J5Kuu",
+      "username": "Arsen",
+      "id": 4
+    }
+  ],
   "posts": [
     {
       "postTitle": "Париж - столица Франции",
-      "postDescr": "Париж - столица Франции",
+      "postDescr": "Париж - стоица Франции",
       "id": "11hYzCZ"
+    },
+    {
+      "postTitle": "Париж",
+      "postDescr": "фывфвa",
+      "id": "ZhQ05KL"
     }
   ]
 }

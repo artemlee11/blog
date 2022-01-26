@@ -40,8 +40,14 @@ const SinglePost = () => {
         setDescr(post.postDescr)
     }
 
-    const handleUpdatePost = () => {
-        // редактировать пост. 
+    const handleUpdatePost = async () => {
+      await axios.put(`http://localhost:3004/posts/${id}`, {
+        postTitle : title,
+        postDescr : descr
+       })
+       setTitle("")
+       setDescr("")
+       setChangeMode(false)
     }
 
     return (
@@ -55,9 +61,9 @@ const SinglePost = () => {
                 {changeMode ? 
             <TextField value={descr} onChange={e => setDescr(e.target.value)} id="post-descr" label="Введите описание поста" variant="outlined" />
             : post.postDescr }</p>
-            <button onClick={handleDeletePost}>Удалить</button>
-            <button onClick={handleChangePost}>Редактировать</button>
-            {changeMode ? <button onClick={handleUpdatePost}>Сохранить</button> :  "" }
+            {changeMode ? "" : <button onClick={handleDeletePost}>Удалить</button> }
+            {changeMode ? "" : <button onClick={handleChangePost}>Редактировать</button> }
+            {changeMode ? <button onClick={handleUpdatePost}>Сохранить</button> : "" }
         </div>
     );
 };
