@@ -20,9 +20,9 @@ const fetchData = (id) => {
 const SinglePost = () => {
 
     const [post, setPost] = useState({})
-    const [changeMode, setChangeMode] = useState(false)
     const [title, setTitle] = useState('')
     const [descr, setDescr] = useState('')
+    const [changeMode, setChangeMode] = useState(false)
 
     const {id} = useParams()
 
@@ -53,17 +53,33 @@ const SinglePost = () => {
     return (
         <div>
             <h1>
-                {changeMode ? 
-            <TextField value={title} onChange={e => setTitle(e.target.value)} id="post-title" label="Введите название поста" variant="outlined" />
+            {changeMode ? 
+            <TextField 
+            value={title} 
+            onChange={e => setTitle(e.target.value)} 
+            id="post-title" 
+            label="Введите название поста" 
+            variant="outlined" />
             : post.postTitle }
             </h1>
+
             <p>
-                {changeMode ? 
-            <TextField value={descr} onChange={e => setDescr(e.target.value)} id="post-descr" label="Введите описание поста" variant="outlined" />
-            : post.postDescr }</p>
-            {changeMode ? "" : <button onClick={handleDeletePost}>Удалить</button> }
-            {changeMode ? "" : <button onClick={handleChangePost}>Редактировать</button> }
-            {changeMode ? <button onClick={handleUpdatePost}>Сохранить</button> : "" }
+            {changeMode ? 
+            <TextField 
+            value={descr} 
+            onChange={e => setDescr(e.target.value)} 
+            id="post-descr" 
+            label="Введите описание поста" 
+            variant="outlined" />
+            : post.postDescr }
+            </p>
+
+            {changeMode ? "" : 
+            <button onClick={handleDeletePost}>Удалить</button> }
+            {changeMode ? "" : 
+            <button onClick={handleChangePost}>Редактировать</button> }
+            {changeMode ?
+            <button onClick={handleUpdatePost}>Сохранить</button> : "" }
         </div>
     );
 };

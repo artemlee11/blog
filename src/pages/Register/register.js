@@ -7,16 +7,21 @@ const Register = () => {
     const [email, setEmail] = useState("")
     const [login, setLogin] = useState("")
     const [password, setPassword] = useState("")
-
+    const [age, setAge] = useState("")
+    const [gender, setGender] = useState("")
     const handleRegister = async (e) => {
         e.preventDefault()
         await axios.post('http://localhost:3004/register/',{
         email,
-        username: login,
+        username:login,
+        age,
+        gender,
         password
         })
         setEmail("")
         setLogin("")
+        setAge("")
+        setGender("")
         setPassword("")
     }
 
@@ -40,6 +45,22 @@ const Register = () => {
         variant="outlined"
         className="reg-input"
         required
+      />
+      <TextField
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        id="post-descr"
+        label="Введите ваш возраст"
+        variant="outlined"
+        className="reg-input"
+      />
+      <TextField
+        value={gender}
+        onChange={(e) => setGender(e.target.value)}
+        id="post-descr"
+        label="Введите ваш пол"
+        variant="outlined"
+        className="reg-input"
       />
       <TextField
         value={password}

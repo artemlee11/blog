@@ -31,14 +31,10 @@ const Login = () => {
     return (
         <div>
        <form onSubmit={handleLogin}>
-            <TextField required value={email} onChange={e => setEmail(e.target.value) } id="email-register" label="Введите логин" variant="outlined" />
+            <TextField required value={email} onChange={e => setEmail(e.target.value) } id="email-register" label="Введите почту" variant="outlined" />
             <TextField required type="password" value={password} onChange={e => setPassword(e.target.value) } id="email-register" label="Введите пароль" variant="outlined" />
-            <Button type="submit" label="submit">Register</Button>
+            <Button type="submit" label="submit">Войти</Button>
        </form>
-       {/* <h1>Логин: {user.username} </h1>
-       <h1>Возраст: {user.username}</h1> */}
-    
-
         </div>
     );
 };

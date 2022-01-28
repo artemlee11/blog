@@ -14,7 +14,7 @@ const Header = () => {
         <nav>
         <Link to="/">Главная</Link>
         <Link to="/createpost">Создать пост</Link>
-        {user ? user.username :<Link to="/register">Регистрация</Link>}
+        {user ? <Link to={"/profile"}>{user.username}</Link> :<Link to="/register">Регистрация</Link>}
         {user ? <Button variant="outlined">Выйти</Button> : <Link to="/login">Войти</Link>}
         </nav>
     </header>

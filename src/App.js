@@ -8,7 +8,7 @@ import PostForm from './pages/PostForm/PostForm';
 import SinglePost from './pages/SinglePost/SinglePost';
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login'
-
+import Profile from   './components/Profile/Profile'
 const App = () => {
   return (
     <div className="App">
@@ -20,6 +20,7 @@ const App = () => {
         <Route path="/singlepost/:id" element={<SinglePost />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/profile" element={<Profile />} />
       </Routes>  
       {/* <Sidebar /> */}
         </div>  
