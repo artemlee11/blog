@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 const Header = () => {
     const {dispatch, user} = useContext(Context)
 
-    const Logout = () => {
+    const handleLogout = () => {
         dispatch({type:"LOGOUT"})
     }
     return (
@@ -15,7 +15,7 @@ const Header = () => {
         <Link to="/">Главная</Link>
         <Link to="/createpost">Создать пост</Link>
         {user ? <Link to={"/profile"}>{user.username}</Link> :<Link to="/register">Регистрация</Link>}
-        {user ? <Button variant="outlined">Выйти</Button> : <Link to="/login">Войти</Link>}
+        {user ? <Button variant="outlined" onClick={handleLogout}>Выйти</Button> : <Link to="/login">Войти</Link>}
         </nav>
     </header>
     );

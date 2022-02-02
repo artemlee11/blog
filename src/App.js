@@ -8,7 +8,7 @@ import PostForm from './pages/PostForm/PostForm';
 import SinglePost from './pages/SinglePost/SinglePost';
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login'
-import Profile from   './components/Profile/Profile'
+import Profile from './pages/Profile/Profile'
 const App = () => {
   return (
     <div className="App">

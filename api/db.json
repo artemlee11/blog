@@ -25,20 +25,12 @@
       "id": 4
     },
     {
-      "email": "artemlee11@mail.ru",
-      "password": "$2a$10$j67xHNmV3xOeH.4i8owy4uWyLr8hKFd3/ZAk0VQIZbvJu5Am57wBC",
-      "username": "Artem",
-      "age": "10",
-      "gender": "d",
-      "id": 5
-    },
-    {
-      "email": "artemlee@mail.ru",
-      "password": "$2a$10$xfs2IUXn62/XJ8K6tEakbuvmEqfstsmLtP/SpwiH.CQKPo1wUx1Wy",
-      "username": "Artem",
-      "age": "18",
+      "password": "$2a$10$DVXxWlyCd3IIkDH1z3XatufQUEOX6xr/thvNHYR4EhoRd.nvzTpme",
+      "email": "artem@mail.ru",
       "gender": "Мужской",
-      "id": 6
+      "age": "11",
+      "username": "Artem",
+      "id": 5
     }
   ],
   "posts": [

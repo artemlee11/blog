@@ -15,7 +15,7 @@ const Login = () => {
             const res = await axios.post('http://localhost:3004/login/',{
                 email,
                 password
-            })
+            }) 
             console.log(res.data.user)
             dispatch({type:"LOGIN_SUCCESS", payload: res.data.user})
             setEmail("")
