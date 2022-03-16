@@ -2,16 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
 import TextField from '@mui/material/TextField';
-
-// Удалить пост по нажатию кнопки удалить
-// onClick, delete axios, delete post react api
-
-// После удаления поста, переходить на главную
-
-// 1. После кнопки появляются инпуты, предназначенные для редактирования соотве-го поста
-// Создать состояние, которое принмает два значения; 
-// 2. 
-
+ 
 const fetchData = (id) => {
     return axios.get(`http://localhost:3004/posts/${id}`)
     .then(response => response.data)

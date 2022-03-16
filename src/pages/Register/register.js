@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import axios from "axios";
 
 const Register = () => {
@@ -9,6 +13,9 @@ const Register = () => {
     const [password, setPassword] = useState("")
     const [age, setAge] = useState("")
     const [gender, setGender] = useState("")
+
+    const [open, setOpen] = React.useState(false)
+
     const handleRegister = async (e) => {
         e.preventDefault()
         await axios.post('http://localhost:3004/register/',{
@@ -18,15 +25,19 @@ const Register = () => {
         gender,
         password
         })
+        setOpen(true)
         setEmail("")
         setLogin("")
         setAge("")
         setGender("")
         setPassword("")
     }
+    const Alert = React.forwardRef(function Alert(props, ref) {
+      return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+    });
 
     return (
-    <form className="reg-form" onSubmit={handleRegister}>
+    <form className="reg-form">
       <TextField
         value={email}
         type={email}
@@ -72,7 +83,10 @@ const Register = () => {
         className="reg-input"
         required
       />
-      <Button type="submit" variant="contained">
+      <Button 
+        type="submit" 
+        variant="contained" 
+        onClick={handleRegister}>
         Зарегистрироваться
       </Button>
     </form>

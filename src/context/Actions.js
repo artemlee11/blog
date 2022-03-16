@@ -17,5 +17,10 @@ export const Logout = () => ({
 
 export const userUpdate = (user) => ({
     type:"USER_UPDATE",
-    payload: user
+    payload: user,
 })
+
+export const userDelete = () => ({
+    type:"USER_DELETE"
+})
+

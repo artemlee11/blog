@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import {Link} from 'react-router-dom';
-import {Context} from '../../context/Context';
 import Button from "@mui/material/Button";
+import {Context} from '../../context/Context';
 const Header = () => {
     const {dispatch, user} = useContext(Context)
-
     const handleLogout = () => {
         dispatch({type:"LOGOUT"})
     }

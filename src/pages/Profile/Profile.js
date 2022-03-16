@@ -17,11 +17,22 @@ const Profile = () => {
     const [edit , editMode] = useState(false)
 
     const handleEdit = () => {
-        editMode(true)
+        editMode(true);
+        setAge(user.age)
+        setUsername(user.username)
+        setGender(user.gender)
+        
     }
 
     const handleDelete = () => {
-        axios.delete(`http://localhost:3004/users/${user.id}`)
+        try{
+            axios.delete(`http://localhost:3004/users/${user.id}`)
+            localStorage.clear()
+            dispatch({type: "USER_DELETE"})
+            window.location.assign("/")
+        } catch(err){
+            console.log(err)
+        }
     }
 
     const handleUpdate = async () => {
@@ -33,7 +44,7 @@ const Profile = () => {
                age,
                username
             })
-            dispatch({type:"USER_UPDATE", payload: res.data.user})
+            dispatch({type:"USER_UPDATE", payload: res.data})
             editMode(false)
         } catch(err) {
             console.log(err)

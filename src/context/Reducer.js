@@ -20,6 +20,10 @@ const Reducer = (state,action) => {
             return{
                 user:action.payload
             }
+            case "USER_DELETE":
+            return{
+                user:null
+            }
             default:
                 return state
     }
